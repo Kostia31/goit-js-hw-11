@@ -2,17 +2,96 @@
   box-sizing: border-box;
 }
 
+p{
+  margin: 0;
+  padding: 0;
+  padding-top: 3px;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
-  color: #212121;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 24, 45, 1) 10%,
+    rgba(51, 53, 73, 1) 27%,
+    rgba(2, 7, 29, 1) 57%,
+    rgba(102, 102, 119, 1) 89%,
+    rgba(20, 24, 45, 1) 100%
+  );
   line-height: 1.5;
 }
 
 .search-form {
+  margin-top: 30px;
+  text-align: center;
+}
+
+input {
+  font-size: 24px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-right: 10px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+input:focus {
+  background-color: rgb(20, 24, 45);
+  box-shadow: 4px 4px 4px rgba(102, 102, 119, 0.5);
+  color: #fafafa;
+  border: none;
+  outline: black;
+}
+button {
+  width: 200px;
+  border: none;
+  font-size: 24px;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+button:hover {
+  background-color: rgb(20, 24, 45);
+  box-shadow: 4px 4px 4px rgba(102, 102, 119, 0.5);
+  color: #fafafa;
+}
+
+img{
+  display: block;
+}
+
+.wrapper{
   display: flex;
-  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+.load-more{
+  visibility: hidden;
+ 
+  margin-top: 30px;
+}
+
+.gallery{
+  margin-top: 30px;
+  display: flex;
+ flex-wrap: wrap;
+ column-gap: 15px;
+ row-gap: 15px;
+}
+
+.photo-card{
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.info{
+  padding-left: 3px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  
+  background-color:floralwhite;
 }
